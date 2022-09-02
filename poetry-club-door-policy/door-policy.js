@@ -1,4 +1,10 @@
-//@ts-check
+// @ts-check
+//
+// ☝🏽 The line above enables type checking for this file. Various IDEs interpret
+// the @ts-check directive. It will give you helpful autocompletion on the web
+// and supported IDEs when implementing this exercise. You don't need to
+// understand types, JSDoc, or TypeScript in order to complete this JavaScript
+// exercise, and can completely ignore this comment block and directive.
 
 /**
  * Respond with the correct character, given the line of the
