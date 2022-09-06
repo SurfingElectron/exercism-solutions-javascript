@@ -8,4 +8,7 @@ This is a repo to store and track my solutions to the [Exercism](https://exercis
     - Concepts: numbers and arithmetic operators 
 3. [Poetry Club Door Policy](https://github.com/SurfingElectron/exercism-solutions-javascript/tree/main/poetry-club-door-policy) ✔️
     - Concepts: strings
-4. [Annalyn's Inflictration](https://github.com/SurfingElectron/exercism-solutions-javascript/tree/main/annalyns-infiltration) 🛠️
+4. [Annalyn's Infiltration](https://github.com/SurfingElectron/exercism-solutions-javascript/tree/main/annalyns-infiltration) ✔️
+    - Concepts: booleans
+5. [Elyse's Enchantments](https://github.com/SurfingElectron/exercism-solutions-javascript/tree/main/elyses-enchantments) 🛠️
+    - Concepts: arrays

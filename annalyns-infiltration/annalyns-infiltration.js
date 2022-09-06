@@ -6,28 +6,22 @@
 // understand types, JSDoc, or TypeScript in order to complete this JavaScript
 // exercise, and can completely ignore this comment block and directive.
 
-// 👋🏽 Hi again!
-//
-// A quick reminder about exercise stubs:
-//
-// 💡 You're allowed to completely clear any stub before you get started. Often
-// we recommend using the stub, because they are already set-up correctly to
-// work with the tests, which you can find in ./annalyns-infiltration.spec.js.
-//
-// 💡 You don't need to write JSDoc comment blocks yourself; it is not expected
-// in idiomatic JavaScript, but some companies and style-guides do enforce them.
-//
-// Now help Annalyn free her best friend!
-
 /**
  * The fast attack is available when the knight is sleeping
  *
  * @param {boolean} knightIsAwake
  *
  * @return {boolean} Whether or not you can execute a fast attack.
+ * 
+ * ORIGINAL CODE - refactored following automated mentoring advice
+ * if(knightIsAwake) {
+ *    return false;
+ *  }
+ *  return true;
+ * 
  */
 export function canExecuteFastAttack(knightIsAwake) {
-  throw new Error('Remove this line and implement the function');
+  return !knightIsAwake;
 }
 
 /**
@@ -38,9 +32,16 @@ export function canExecuteFastAttack(knightIsAwake) {
  * @param {boolean} prisonerIsAwake
  *
  * @returns {boolean} Whether or not you can spy on someone.
+ * 
+ * ORIGINAL CODE - refactored following automated mentoring advice
+ * if(!knightIsAwake && !archerIsAwake && !prisonerIsAwake) {
+ *  return false
+ * }
+ * return true;
+ * 
  */
 export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
-  throw new Error('Remove this line and implement the function');
+  return knightIsAwake || archerIsAwake || prisonerIsAwake;
 }
 
 /**
@@ -50,9 +51,16 @@ export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
  * @param {boolean} prisonerIsAwake
  *
  * @returns {boolean} Whether or not you can send a signal to the prisoner.
+ * 
+ * ORIGINAL CODE - refactored following automated mentoring advice
+ * if(!archerIsAwake && prisonerIsAwake) {
+ *   return true;
+ * }
+ * return false;
+ * 
  */
 export function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
-  throw new Error('Remove this line and implement the function');
+  return !archerIsAwake && prisonerIsAwake;
 }
 
 /**
@@ -64,12 +72,27 @@ export function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
  * @param {boolean} petDogIsPresent
  *
  * @returns {boolean} Whether or not you can free Annalyn's friend.
+ * 
+ * ORIGINAL CODE - refactored following automated mentoring advice
+ * if (!archerIsAwake && petDogIsPresent) {
+ *   return true
+ * }
+ * if (!knightIsAwake && !archerIsAwake && prisonerIsAwake && !petDogIsPresent) {
+ *   return true
+ * }
+ * return false;
+ * 
  */
+
 export function canFreePrisoner(
   knightIsAwake,
   archerIsAwake,
   prisonerIsAwake,
   petDogIsPresent
 ) {
-  throw new Error('Remove this line and implement the function');
+  return (
+    (petDogIsPresent && !archerIsAwake)
+    ||
+    (prisonerIsAwake && !knightIsAwake && !archerIsAwake)
+  );
 }
